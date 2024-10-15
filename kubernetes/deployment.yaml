@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: main-app-deployment
+  labels:
+    name: main-app-deployment
+spec:
+  selector:
+    matchLabels:
+      name: main-app-pod
+  template:
+    metadata:
+      name: main-app-template
+      labels:
+        name: main-app-pod
+    spec:
+      containers:
+        - name: main-app
+          image: k33sio/test-image-jibs:1.0.2
+          ports:
+            - containerPort: 8090
