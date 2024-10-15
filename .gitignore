@@ -1,0 +1,5 @@
+.idea
+
+target
+helm/target
+server/target
